@@ -18,7 +18,7 @@ class PickledObjectField(models.Field):
         if value is None:
             return value
 
-        if isinstance(value, str) and value is not '':
+        if isinstance(value, str) and value != '':
             # If the value is a sting and an error is raised in de-pickling
             # it should be allowed to propogate.
             value = value.encode()  # encode str to bytes
