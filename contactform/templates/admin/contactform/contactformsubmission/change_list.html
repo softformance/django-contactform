@@ -1,5 +1,5 @@
 {% extends "admin/change_list.html" %}
-{% load admin_list i18n staticfiles %}
+{% load admin_list i18n static %}
 
 {% block extrahead %}{{ block.super }}
 
@@ -109,7 +109,7 @@ function update_url(){
 	}
 }
 
-addEvent(window, 'load', add_zindex); 
+addEvent(window, 'load', add_zindex);
 
 </script>
 {{ media }}

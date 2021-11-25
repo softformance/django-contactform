@@ -11,7 +11,7 @@ class PickledObjectField(models.Field):
     this version of pickled object does not work for pickling a single string. it must be some object, dict, list...
     """
 
-    def from_db_value(self, value, expression, connection, context):
+    def from_db_value(self, value, expression, connection, context=None):
         return self.to_python(value)
 
     def to_python(self, value):
